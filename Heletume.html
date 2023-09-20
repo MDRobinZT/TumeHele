@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TumeHele</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .dark {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="dark">
+    <div class="container mt-5">
+        <h1>TTHK</h1>
+        <p>Uus tunniplaan on sitt</p>
+        <button id="themeToggle" class="btn btn-dark">VAJUTA MIND</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('themeToggle');
+            themeToggle.addEventListener('click', function () {
+                document.body.classList.toggle('dark');
+                if (document.body.classList.contains('dark')) {
+                    themeToggle.textContent = 'VAJUTA MIND';
+                } else {
+                    themeToggle.textContent = 'VAJUTA MIND UUESTI';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
